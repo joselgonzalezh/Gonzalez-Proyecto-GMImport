@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Inicio Formato de Header o Barra de Navegacion  */
+
+.contenedor {
+    display: grid;
+    grid-template-areas: "header"
+        "aside"
+        "main"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 120px auto auto auto;
+}
+
+.header {
+    display: flex;
+    grid-area: header;
+    background-color: rgb(202, 202, 202);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegacion {
+    width: 50%;
+}
+
+.listaNav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.listaNav li a {
+    color: rgb(97, 97, 97);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.listaNav li :hover {
+    color: rgb(17, 202, 42);
+}
+
+/* Concluyo Formato de Header o Barra de Navegacion  */
+
+/* Inicio Formato de Aside */
+
+.aside {
+    grid-area: aside;
+}
+
+.destacados {
+    width: 100%;
+    background: rgb(202, 202, 202);
+    text-align: center;
+    padding: 1px 0px;
+    font-size: 17px;
+}
+
+/* Concluyo Formato de Aside */
+
+/* Inicio Formato del Main */
+
+.main {
+    grid-area: main;
+}
+
+.seccion1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.card {
+    width: 200px;
+    height: 350px;
+}
+
+.card:hover {
+    box-shadow: 0 20px 20px rgb(0 0 0 /20%);
+}
+
+.producto1 {
+    height: 50%;
+    width: 100%;
+}
+
+.imag {
+    height: 100%;
+    width: 100%;
+}
+
+.detalle {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.detalle:hover {
+    box-shadow: 0 20px 20px rgb(0 0 0 /20%);
+}
+
+.producto2 {
+    height: 50%;
+    width: 100%;
+}
+
+.producto3 {
+    height: 50%;
+    width: 100%;
+}
+
+.producto4 {
+    height: 50%;
+    width: 100%;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(202, 202, 202);
+}
+
+.section-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 50px;
+}
+
+/* Concluyo Formato del Main */
+
+/*Inicio Formato de HTML NUESTROS PRODUCTOS con Metodo Grid*/
+
+#grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header header header"
+        "producto1 producto2 servicios"
+        "producto3 producto4 servicios";
+    margin-left: 40px;
+    text-align: center;
+}
+
+div#general {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 45px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+div#producto1 {
+    grid-area: producto1;
+}
+
+div#producto2 {
+    grid-area: producto2;
+}
+
+div#producto3 {
+    grid-area: producto3;
+}
+
+div#producto4 {
+    grid-area: producto4;
+}
+
+aside#servicios {
+    grid-area: servicios;
+}
+
+nav div {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+nav div p {
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 400px;
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 45px;
+}
+
+.prod:hover {
+    box-shadow: 0 20px 20px rgb(0 0 0 /20%);
+}
+
+/*Concluyo Formato HTML Nuestros Productos con Metodo Grid*/
+
+/* Inicio Formato Responsive para HTML Nuestros Productos */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
+    #grilla {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "header header "
+            "producto1 producto2 "
+            "producto3 producto4 ";
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    #servicios {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
+    #grilla {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "header header "
+            "producto1 producto2"
+            "producto3 producto4";
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    #servicios {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #grilla {
+        grid-template-areas:
+            "header header header"
+            "producto1 producto2 servicios"
+            "producto3 producto4 servicios";
+        grid-template-rows: 350px 350px 350px;
+        grid-template-columns: 470px 470px 470px;
+        border-color: black;
+    }
+
+    #servicios {
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+        margin-left: 30px;
+        background-color: black;
+    }
+}
+
+@media screen and (min-width: 10px) and (max-width: 768px) {
+    #servicios {
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+        margin-left: 30px;
+        background-color: black;
+        display: none;
+    }
+
+    .prod {
+        width: 200px;
+        height: 350px;
+    }
+
+    .seccion2 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 0px;
+        justify-content: center;
+    }
+
+    .seccion3 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 0px;
+        justify-content: center;
+    }
+
+    #general {
+        grid-area: header;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 45px;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    #general img {
+        width: 100%;
+    }
+
+    .detalle {
+        font-family: sans-serif;
+        font-size: 14px;
+        flex-wrap: wrap;
+        padding: 0px 0px;
+        font-weight: bold;
+        justify-content: center;
+    }
+
+    .seccion2 .producto1 {
+        display: flex;
+    }
+
+    .seccion2 .producto2 {
+        display: flex;
+    }
+
+    .seccion3 .producto3 {
+        display: flex;
+    }
+
+    .seccion3 .producto4 {
+        display: flex;
+    }
+
+    #grilla {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "header"
+            "producto1"
+            "producto2"
+            "producto3"
+            "producto4";
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+}
+
+/*Concluyo Formato Responsive de HTML NUESTROS PRODUCTOS con Metodo Grid*/
+
+/*Inicio Formato Media Query de Footer*/
+
+@media screen and (max-width: 768px) {
+    .section-footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact h2 {
+        text-align: center;
+        padding: 35px;
+    }
+
+    .metododepago {
+        text-align: center;
+        padding: 35px;
+    }
+
+    .redes__sociales {
+        padding: 25px;
+    }
+}
+
+/* Concluyo Formato Responsive de Footer */
+
+/*Inicio de Formato HTML Servicios */
+
+#grid-servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.services {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 450px;
+    padding: 20px;
+    width: 35%;
+    text-align: justify;
+    margin-right: 100px;
+    float: right;
+}
+
+.encabeza {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 45px;
+}
+
+.reparacion {
+    padding: 20px;
+    width: 35%;
+    margin-left: 100px;
+}
+
+@media (max-width: 1000px) {
+
+    .encabeza {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .services {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        padding: 5px;
+        width: 95%;
+        height: auto;
+        margin: 15px 10px;
+    }
+
+    .reparacion {
+        height: auto;
+        padding: 5px;
+        margin-left: 25px;
+        margin: 0px 0px;
+    }
+}
+
+/*Concluyo Formato HTML Servicios */
+
+/*Inicio formato de HTML sobrenosotros*/
+
+.encabezado {
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#grid-sobrenosotros {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+.sobre-nosotros {
+    padding: 10px;
+    height: 450px;
+    margin-left: 60px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    text-align: justify;
+    float: left;
+}
+
+.nosmueve {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    height: 450px;
+    padding: 10px;
+    width: 40%;
+    text-align: justify;
+    margin-right: 100px;
+    float: right;
+}
+
+@media (max-width: 1000px) {
+
+    .sobre-nosotros {
+        padding: 10px;
+        height: auto;
+        font-size: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 70%;
+        display: flex;
+    }
+
+    .nosmueve {
+        height: auto;
+        font-size: 19px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: auto;
+        display: flex;
+        padding: 0px;
+        text-align: justify;
+        margin: 65px;
+    }
+}
+
+/*Finalizo Formato de HTML sobrenosotros*/
+
+/*Comienzo el formato de HTML Contacto */
+
+#grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.contactos {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 550px;
+    padding: 55px 55px 10px 55px;
+}
+
+.datonombre {
+    width: 550px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.datonombre input {
+    width: 550px;
+    height: 35px;
+    display: grid;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.datonombre textarea {
+    min-height: 150px;
+    width: 550px;
+    display: grid;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.button {
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    margin: 0 auto;
+    width: 550px;
+    display: grid;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+@media (max-width: 1000px) {
+    .contactos {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        margin-left: 0 0;
+        width: 300px;
+        padding: 15px 0px 15px 0px;
+        text-align: left;
+    }
+
+    .datonombre {
+        width: 300px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .datonombre input {
+        width: 300px;
+        text-align: left;
+        height: 35px;
+        display: grid;
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    .datonombre textarea {
+        min-height: 150px;
+        width: 300px;
+        display: grid;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    .button {
+        font-size: 14px;
+        font-weight: 600;
+        height: 40px;
+        margin: 0 auto;
+        width: 300px;
+        display: grid;
+        border: 1px solid rgb(204, 204, 204);
+    }
+}
+
+/*Concluyo Formato de HTML contacto */
+
+/* Inicio Formato Menu Hamburguesa*/
+
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.menu-icon,
+#check {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .listaNav {
+        display: block;
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        background: rgb(202, 202, 202);
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+
+    .listaNav li {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        transition: all .25s;
+    }
+}
+
+/* Finalizo Formato Menu Hamburguesa */
