@@ -78,10 +78,12 @@
 .card {
     width: 200px;
     height: 350px;
+    transition: transform 2s;
 }
 
 .card:hover {
     box-shadow: 0 20px 20px rgb(0 0 0 /20%);
+    transform: translate(50px, 20px);
 }
 
 .producto1 {
