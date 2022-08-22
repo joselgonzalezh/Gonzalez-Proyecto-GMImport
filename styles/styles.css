@@ -656,3 +656,33 @@ nav div p {
 }
 
 /* Finalizo Formato Menu Hamburguesa */
+
+
+.navbar {
+    background-color: rgb(202, 202, 202);
+}
+
+.nav-link:hover {
+    color: rgb(17, 202, 42) !important;
+}
+
+.nav-link {
+    font-weight: bold;
+    margin: 10px;
+    font-size: 20px;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+       
+}
+
+p{
+    text-align: justify;
+}
+
+.carousel-inner img {
+    width: 150%;
+    max-height: 420px;
+}
