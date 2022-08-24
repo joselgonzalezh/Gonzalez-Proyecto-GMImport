@@ -657,6 +657,8 @@ nav div p {
 
 /* Finalizo Formato Menu Hamburguesa */
 
+/*Inicio Formato BOOTSTRAP */
+
 
 .navbar {
     background-color: rgb(202, 202, 202);
@@ -674,15 +676,28 @@ nav div p {
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-       
+    font-family: Arial, Helvetica, sans-serif; 
+
 }
 
-p{
+p {
     text-align: justify;
 }
 
 .carousel-inner img {
     width: 150%;
     max-height: 420px;
+}
+
+footer {
+    background-color: rgb(202, 202, 202);
+    text-align: center;
+}
+
+footer ul li {
+    text-align: left;
+}
+
+footer h2 {
+    text-align: center;
 }
