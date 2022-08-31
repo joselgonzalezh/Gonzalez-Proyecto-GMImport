@@ -1,143 +1,3 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* Inicio Formato de Header o Barra de Navegacion  */
-
-.contenedor {
-    display: grid;
-    grid-template-areas: "header"
-        "aside"
-        "main"
-        "footer";
-    grid-template-columns: 100%;
-    grid-template-rows: 120px auto auto auto;
-}
-
-.header {
-    display: flex;
-    grid-area: header;
-    background-color: rgb(202, 202, 202);
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navegacion {
-    width: 50%;
-}
-
-.listaNav {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-}
-
-.listaNav li a {
-    color: rgb(97, 97, 97);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.listaNav li :hover {
-    color: rgb(17, 202, 42);
-}
-
-/* Concluyo Formato de Header o Barra de Navegacion  */
-
-/* Inicio Formato de Aside */
-
-.aside {
-    grid-area: aside;
-}
-
-.destacados {
-    width: 100%;
-    background: rgb(202, 202, 202);
-    text-align: center;
-    padding: 1px 0px;
-    font-size: 17px;
-}
-
-/* Concluyo Formato de Aside */
-
-/* Inicio Formato del Main */
-
-.main {
-    grid-area: main;
-}
-
-.seccion1 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px 0px;
-}
-
-.card {
-    width: 200px;
-    height: 350px;
-    transition: transform 2s;
-}
-
-.card:hover {
-    box-shadow: 0 20px 20px rgb(0 0 0 /20%);
-    transform: translate(50px, 20px);
-}
-
-.producto1 {
-    height: 50%;
-    width: 100%;
-}
-
-.imag {
-    height: 100%;
-    width: 100%;
-}
-
-.detalle {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 15px;
-    flex-wrap: wrap;
-    padding: 5px 10px;
-    font-weight: bold;
-}
-
-.detalle:hover {
-    box-shadow: 0 20px 20px rgb(0 0 0 /20%);
-}
-
-.producto2 {
-    height: 50%;
-    width: 100%;
-}
-
-.producto3 {
-    height: 50%;
-    width: 100%;
-}
-
-.producto4 {
-    height: 50%;
-    width: 100%;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: rgb(202, 202, 202);
-}
-
-.section-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 50px;
-}
-
-/* Concluyo Formato del Main */
-
 /*Inicio Formato de HTML NUESTROS PRODUCTOS con Metodo Grid*/
 
 #grilla {
@@ -184,20 +44,21 @@ aside#servicios {
 
 nav div {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     font-size: 16px;
-}
 
-nav div p {
-    text-align: center;
-    padding: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    width: 400px;
+    p {
+        text-align: center;
+        padding: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        width: 400px;
+    }
+
 }
 
 .titulo {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     text-align: center;
     font-size: 45px;
 }
@@ -207,6 +68,22 @@ nav div p {
 }
 
 /*Concluyo Formato HTML Nuestros Productos con Metodo Grid*/
+
+/* Inicio Formato de Aside Metodo Grid */
+
+.aside {
+    grid-area: aside;
+}
+
+.destacados {
+    width: 100%;
+    background: $fondo-nav-footer;
+    text-align: center;
+    padding: 1px 0px;
+    font-size: 17px;
+}
+
+/* Concluyo Formato de Aside Metodo Grid*/
 
 /* Inicio Formato Responsive para HTML Nuestros Productos */
 
@@ -393,7 +270,7 @@ nav div p {
 }
 
 .services {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     font-size: 20px;
     height: 450px;
     padding: 20px;
@@ -404,7 +281,7 @@ nav div p {
 }
 
 .encabeza {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     text-align: center;
     font-size: 45px;
 }
@@ -418,13 +295,13 @@ nav div p {
 @media (max-width: 1000px) {
 
     .encabeza {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
         text-align: center;
         font-size: 35px;
     }
 
     .services {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
         font-size: 25px;
         padding: 5px;
         width: 95%;
@@ -447,7 +324,7 @@ nav div p {
 .encabezado {
     text-align: center;
     font-size: 45px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
 }
 
 #grid-sobrenosotros {
@@ -465,14 +342,14 @@ nav div p {
     height: 450px;
     margin-left: 60px;
     font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     width: 40%;
     text-align: justify;
     float: left;
 }
 
 .nosmueve {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     font-size: 19px;
     height: 450px;
     padding: 10px;
@@ -488,7 +365,7 @@ nav div p {
         padding: 10px;
         height: auto;
         font-size: 19px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
         width: 70%;
         display: flex;
     }
@@ -496,7 +373,7 @@ nav div p {
     .nosmueve {
         height: auto;
         font-size: 19px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
         width: auto;
         display: flex;
         padding: 0px;
@@ -520,7 +397,7 @@ nav div p {
 }
 
 .contactos {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $estilo-tipografia;
     font-size: 15px;
     margin: 0 auto;
     width: 550px;
@@ -530,23 +407,23 @@ nav div p {
 .datonombre {
     width: 550px;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: $estilo-tipografia;
 
-.datonombre input {
-    width: 550px;
-    height: 35px;
-    display: grid;
-    border: 1px solid rgb(204, 204, 204);
-}
+    input {
+        width: 550px;
+        height: 35px;
+        display: grid;
+        border: 1px solid rgb(204, 204, 204);
+    }
 
-.datonombre textarea {
-    min-height: 150px;
-    width: 550px;
-    display: grid;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid rgb(204, 204, 204);
+    textarea {
+        min-height: 150px;
+        width: 550px;
+        display: grid;
+        font-size: 15px;
+        font-family: $estilo-tipografia;
+        border: 1px solid rgb(204, 204, 204);
+    }
 }
 
 .button {
@@ -561,7 +438,7 @@ nav div p {
 
 @media (max-width: 1000px) {
     .contactos {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
         font-size: 15px;
         margin-left: 0 0;
         width: 300px;
@@ -572,7 +449,7 @@ nav div p {
     .datonombre {
         width: 300px;
         margin: 0 auto;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
     }
 
     .datonombre input {
@@ -588,7 +465,7 @@ nav div p {
         width: 300px;
         display: grid;
         font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $estilo-tipografia;
         border: 1px solid rgb(204, 204, 204);
     }
 
@@ -604,100 +481,3 @@ nav div p {
 }
 
 /*Concluyo Formato de HTML contacto */
-
-/* Inicio Formato Menu Hamburguesa*/
-
-.menu-icon img {
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
-}
-
-.menu-icon,
-#check {
-    display: none;
-}
-
-@media (max-width: 1000px) {
-    .checkbtn {
-        display: block;
-    }
-
-    .menu-icon {
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
-
-    .listaNav {
-        display: block;
-        position: fixed;
-        top: 100px;
-        left: -100%;
-        background: rgb(202, 202, 202);
-        width: 100%;
-        height: 100vh;
-        right: 0;
-    }
-
-    .listaNav li {
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-
-    #check:checked~ul {
-        left: 0;
-        transition: all .25s;
-    }
-}
-
-/* Finalizo Formato Menu Hamburguesa */
-
-/*Inicio Formato BOOTSTRAP */
-
-
-.navbar {
-    background-color: rgb(202, 202, 202);
-}
-
-.nav-link:hover {
-    color: rgb(17, 202, 42) !important;
-}
-
-.nav-link {
-    font-weight: bold;
-    margin: 10px;
-    font-size: 20px;
-}
-
-
-body {
-    font-family: Arial, Helvetica, sans-serif; 
-
-}
-
-p {
-    text-align: justify;
-}
-
-.carousel-inner img {
-    width: 150%;
-    max-height: 420px;
-}
-
-footer {
-    background-color: rgb(202, 202, 202);
-    text-align: center;
-}
-
-footer ul li {
-    text-align: left;
-}
-
-footer h2 {
-    text-align: center;
-}

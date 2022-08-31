@@ -1,0 +1,42 @@
+/* Inicio Formato de Header o Barra de Navegacion  */
+
+.contenedor {
+    display: grid;
+    grid-template-areas: "header"
+        "aside"
+        "main"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 120px auto auto auto;
+}
+
+.header {
+    display: flex;
+    grid-area: header;
+    background-color: $fondo-nav-footer;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegacion {
+    width: 50%;
+}
+
+.listaNav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.listaNav li a {
+    color: rgb(97, 97, 97);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.listaNav li :hover {
+    color: $color-hover;
+}
+
+/* Concluyo Formato de Header o Barra de Navegacion  */

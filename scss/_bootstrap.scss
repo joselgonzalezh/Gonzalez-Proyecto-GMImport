@@ -1,0 +1,47 @@
+/*Inicio Formato BOOTSTRAP */
+
+
+.navbar {
+    background-color: $fondo-nav-footer;
+}
+
+.nav-link {
+    font-weight: bold;
+    margin: 10px;
+    font-size: 20px;
+
+    &:hover {
+        color: rgb(17, 202, 42) !important;
+    }
+}
+
+
+body {
+    font-family: $estilo-tipografia;
+}
+
+p {
+    text-align: justify;
+}
+
+.carousel-inner img {
+    width: 150%;
+    max-height: 420px;
+}
+
+footer {
+    background-color: $fondo-nav-footer;
+    text-align: center;
+
+    ul {
+        text-align: left;
+
+        li {
+            text-align: left;
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
