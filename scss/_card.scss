@@ -1,0 +1,8 @@
+.card {
+    @extend %card;
+    transition: transform 2s;
+}
+
+.detalle {
+    @include texto( $fontfamily: sans-serif, $fontsize: 15px);
+}

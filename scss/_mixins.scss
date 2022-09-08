@@ -1,0 +1,8 @@
+@mixin texto ($fontfamily, $fontsize) {
+    text-align: center;
+    font-family: $fontfamily;
+    font-size: $fontsize;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    font-weight: bold;
+}

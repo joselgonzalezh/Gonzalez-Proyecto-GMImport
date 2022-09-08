@@ -1,6 +1,9 @@
 //Variables
 @import "./Variables/colores";
 @import "./Variables/tipografia";
+@import "extends";
+@import "mixins";
+@import "maps";
 
 //Partials
 @import "generales";
@@ -8,3 +11,5 @@
 @import "main";
 @import "grilla";
 @import "bootstrap";
+@import "imagenes";
+@import "card";

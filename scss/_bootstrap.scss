@@ -21,7 +21,7 @@ body {
 }
 
 p {
-    text-align: justify;
+    text-align: map-get($estilos, alineacionparrafo);
 }
 
 .carousel-inner img {

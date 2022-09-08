@@ -11,20 +11,9 @@
     margin: 20px 0px;
 }
 
-.card {
-    width: 200px;
-    height: 350px;
-    transition: transform 2s;
-}
-
 .card:hover {
     box-shadow: 0 20px 20px rgb(0 0 0 /20%);
     transform: translate(50px, 20px);
-}
-
-.producto1 {
-    height: 50%;
-    width: 100%;
 }
 
 .imag {
@@ -32,32 +21,8 @@
     width: 100%;
 }
 
-.detalle {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 15px;
-    flex-wrap: wrap;
-    padding: 5px 10px;
-    font-weight: bold;
-}
-
 .detalle:hover {
     box-shadow: 0 20px 20px rgb(0 0 0 /20%);
-}
-
-.producto2 {
-    height: 50%;
-    width: 100%;
-}
-
-.producto3 {
-    height: 50%;
-    width: 100%;
-}
-
-.producto4 {
-    height: 50%;
-    width: 100%;
 }
 
 .footer {
